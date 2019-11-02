@@ -53,6 +53,10 @@
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
+                        <li class="nav-item" v-for="project in json.CityCouncilProjects">
+                            {{ project.name }}
+                        </li>
+                        <!--
                         <li class="nav-item">
                             <a href="pages/charts/chartjs.html" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
@@ -71,6 +75,7 @@
                                 <p>Inline</p>
                             </a>
                         </li>
+                        -->
                     </ul>
                 </li>
 

@@ -1,9 +1,16 @@
 {
-  "CityCouncilProjects": {
-    "name": "2019-11-07 13:00 posėdis",
-    "file": "SiauiaiCityCouncilProjects_2019-11-07_13_00_00.json",
-    "enabled": true
-  },
+  "CityCouncilProjects": [
+    {
+      "name": "XXX",
+      "file": "XXX.json",
+      "enabled": true
+    },
+    {
+      "name": "2019-11-07 13:00 posėdis",
+      "file": "SiauiaiCityCouncilProjects_2019-11-07_13_00_00.json",
+      "enabled": true
+    }
+  ],
   "Budget": {
     "name": "SiauiaiCityCouncilProjects_2019-11-07_13_00_00.json",
     "file": "SiauiaiCityCouncilProjects_2019-11-07_13_00_00.json",
