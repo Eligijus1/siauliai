@@ -54,7 +54,8 @@
                     </a>
                     <ul class="nav nav-treeview" id="menuCityCouncilProjects">
                         <li class="nav-item" v-for="project in json.CityCouncilProjects">
-                            <a v-bind:href="'?id=1&jsonFile='+ project.file" class="nav-link">
+                            <!-- <a v-on:click="setActive(project.id)" v-bind:href="'?id='+project.id+'&jsonFile='+ project.file" v-bind:id="project.id" class="nav-link"> -->
+                            <a v-on:click="setActive(project.id, $event)" v-bind:id="project.id" v-bind:ref="project.id" href="#" v-bind:class="[navLinkClass, isActive(project.id) ? activeClass : '']">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>{{ project.name }}</p>
                             </a>
