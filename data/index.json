@@ -16,14 +16,14 @@
   "Budget": [
     {
       "id": "b_2017",
-      "name": "SiauliaiCityCouncilProjects_2019-11-07_13_00_00.json",
-      "file": "SiauliaiCityCouncilProjects_2019-11-07_13_00_00.json",
+      "name": "2017 metų",
+      "file": "Budget_2017.json",
       "enabled": true
     },
     {
       "id": "b_2018",
-      "name": "SiauliaiCityCouncilProjects_2019-11-07_13_00_00.json",
-      "file": "SiauliaiCityCouncilProjects_2019-11-07_13_00_00.json",
+      "name": "2018 metų",
+      "file": "Budget_2018.json",
       "enabled": true
     }
   ]
