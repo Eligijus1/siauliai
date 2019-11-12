@@ -1,11 +1,13 @@
-const testConst = 1;
-
 let router = new VueRouter({
     mode: 'history',
     routes: []
 });
 
-console.info(testConst);
+import Vue from 'vue'
+import App from 'App.vue'
+new Vue({
+    render: h => h(App)
+}).$mount('#app')
 
 new Vue({
     router,
