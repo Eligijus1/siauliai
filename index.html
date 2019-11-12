@@ -47,7 +47,7 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar Menu -->
-        <nav class="mt-2">
+        <nav class="mt-2" id="menuCity">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item has-treeview menu-open">
                     <a href="#" class="nav-link">
@@ -57,7 +57,7 @@
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
-                    <ul class="nav nav-treeview" id="menuCityCouncilProjects">
+                    <ul class="nav nav-treeview" >
                         <li class="nav-item" v-for="project in json.CityCouncilProjects">
                             <a v-on:click="setActive(project.id, $event)" v-bind:id="project.id" v-bind:ref="project.id"
                                href="#" v-bind:class="[navLinkClass, isActive(project.id) ? activeClass : '']">

@@ -9,7 +9,7 @@ console.info(testConst);
 
 new Vue({
     router,
-    el: '#menuCityCouncilProjects',
+    el: '#menuCity',
     data: {
         json: {},
         activeClass: 'active',
