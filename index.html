@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,12 @@
     <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
     <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <!--
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router"></script>
+    -->
+    <script src="plugins/vue/vue.js"></script>
+    <script src="plugins/vue/vue-router.js"></script>
 </head>
 <body>
 
@@ -44,7 +49,7 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <li class="nav-item has-treeview">
+                <li class="nav-item has-treeview menu-open">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-university"></i>
                         <p>
@@ -54,7 +59,8 @@
                     </a>
                     <ul class="nav nav-treeview" id="menuCityCouncilProjects">
                         <li class="nav-item" v-for="project in json.CityCouncilProjects">
-                            <a v-on:click="setActive(project.id, $event)" v-bind:id="project.id" v-bind:ref="project.id" href="#" v-bind:class="[navLinkClass, isActive(project.id) ? activeClass : '']">
+                            <a v-on:click="setActive(project.id, $event)" v-bind:id="project.id" v-bind:ref="project.id"
+                               href="#" v-bind:class="[navLinkClass, isActive(project.id) ? activeClass : '']">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>{{ project.name }}</p>
                             </a>
@@ -142,7 +148,7 @@
                     </ul>
                 </li>
 
-
+                <!--
                 <li class="nav-header">Apie</li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">
@@ -162,6 +168,7 @@
                         <p>Informational</p>
                     </a>
                 </li>
+                -->
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
@@ -199,11 +206,11 @@
                     <div class="small-box bg-info">
                         <div class="inner">
                             <p>Debug information:</p>
-                            <p>
+
                             <div id="appDebug">
                                 <pre>{{ json }}</pre>
                             </div>
-                            </p>
+
                         </div>
                     </div>
                 </div>
@@ -291,7 +298,7 @@
     <!-- Control sidebar content goes here -->
 </aside>
 <!-- /.control-sidebar -->
-</div>
+
 <!-- ./wrapper -->
 
 <script src="plugins/jquery/jquery.min.js"></script>

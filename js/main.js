@@ -2,11 +2,21 @@
 let uri = window.location.search.substring(1);
 let params = new URLSearchParams(uri);
 
+const NotFound = { template: '<p>Page not found</p>' }
+const Home = { template: '<p>home page</p>' }
+const About = { template: '<p>about page</p>' }
+
+let router = new VueRouter({
+    mode: 'history',
+    routes: []
+});
+
 // DEBUG:
 //console.info("id=", params.get("id"));
 //console.info("jsonFile=", params.get("jsonFile"));
 
 new Vue({
+    router,
     el: '#menuCityCouncilProjects',
     data: {
         json: {
@@ -33,7 +43,17 @@ new Vue({
         },
         activeClass: 'active',
         navLinkClass: 'nav-link',
-        activeItem: null
+        activeItem: null,
+        currentRoute: window.location.pathname
+    },
+    mounted: function() {
+        let parameters = this.$route.query;
+        console.log(parameters);
+
+        let id = this.$route.query.id;
+        console.log(id);
+        this.setActive('menu_2');
+
     },
     created: function () {
         console.info("created");
@@ -43,6 +63,12 @@ new Vue({
 //                 this.json = json;
 //             });
     },
+    computed: {
+        ViewComponent () {
+            return routes[this.currentRoute] || NotFound
+        }
+    },
+    //render (h) { return h(this.ViewComponent) },
     methods: {
         isActive: function (menuItem) {
             return this.activeItem === menuItem
